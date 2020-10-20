@@ -1,0 +1,40 @@
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item + &__item {
+    margin-left: 30px;
+  }
+
+  &__link {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 170px;
+    height: 90px;
+    border: 1px solid $icon-color;
+    border-radius: 4px;
+
+    transition: border 250ms $timing-function;
+
+    &:focus,
+    &:hover {
+      border: 1px solid $accent-color;
+    }
+
+    &:focus .clients__logo,
+    &:hover .clients__logo {
+      fill: $accent-color;
+    }
+  }
+
+  &__logo {
+    align-self: center;
+    fill: $icon-color;
+    transition: fill 250ms $timing-function;
+  }
+}

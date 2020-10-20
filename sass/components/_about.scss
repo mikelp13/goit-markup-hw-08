@@ -1,0 +1,32 @@
+.about {
+  padding-bottom: 94px;
+
+  &__list {
+    display: flex;
+  }
+}
+
+.about__list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about__list-link {
+  display: block;
+  position: relative;
+}
+.about__list-label {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  width: 100%;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: $primary-white-color;
+  background-color: $transparent-color;
+}

@@ -1,0 +1,95 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $hero-footer-bg-color;
+
+  &__studio-logo {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-wrapper {
+  display: flex;
+}
+.footer-container {
+  margin-right: 70px;
+}
+
+.footer-links {
+  margin-top: 12px;
+  margin-right: 93px;
+}
+
+.slogan {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $primary-white-color;
+}
+
+.socials__link--color {
+  background-color: $social-links-bg-color;
+  border-radius: 50%;
+}
+
+.social-logo--color {
+  fill: $primary-white-color;
+}
+
+.address__list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__list-link {
+  font-size: 14px;
+  line-height: 1.71;
+  font-style: normal;
+  text-decoration: none;
+  color: $footer-text;
+
+  &--color {
+    color: $primary-white-color;
+  }
+}
+
+.footer-form {
+  margin-top: 12px;
+}
+
+.subscribe-form {
+  display: flex;
+
+  &__title {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__field {
+    margin-right: 12px;
+    padding: 15px 16px;
+    width: 358px;
+    height: 50px;
+
+    color: $footer-text;
+
+    border: 1px solid $subscribe-form-border;
+    border-radius: 4px;
+    background-color: transparent;
+  }
+
+  &__button {
+    position: relative;
+    padding-left: 28px;
+    padding-right: 28px;
+    text-align: left;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 13px;
+    right: 28px;
+  }
+}

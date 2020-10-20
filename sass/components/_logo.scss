@@ -1,0 +1,16 @@
+.studio-logo {
+  text-decoration: none;
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: $title-text-color;
+
+  &__item {
+    color: $accent-color;
+
+    &--inverse {
+      color: $primary-white-color;
+    }
+  }
+}
