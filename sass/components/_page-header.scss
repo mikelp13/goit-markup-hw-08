@@ -45,10 +45,6 @@
 }
 
 .menu-container {
-  &.is-open {
-    display: block;
-  }
-
   @media screen and (max-width: 767px) {
     display: none;
     position: absolute;
@@ -58,6 +54,10 @@
     padding: 60px 120px;
     background: $primary-white-color;
     box-shadow: $mobile-menu-shadow;
+
+    &.is-open {
+      display: block;
+    }
   }
 
   @media screen and (min-width: 768px) {
