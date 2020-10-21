@@ -44,6 +44,11 @@
   border: 1px solid $close-btn-color;
   border-radius: 50%;
   cursor: pointer;
+
+  &:hover .close-icon,
+  &:focus .close-icon {
+    fill: $accent-color;
+  }
 }
 
 .close-icon {
@@ -53,6 +58,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: fill 250ms $timing-function;
 }
 
 .form {
