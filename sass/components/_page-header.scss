@@ -4,24 +4,18 @@
   border-bottom: 1px solid $header-border-color;
 }
 
-// .header-navigation,
-// .navigation {
-//   display: flex;
-//   align-items: center;
-// }
-
-// MOBILE MENU
 .header-navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 16px;
-  padding-bottom: 16px;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
 }
 
-@media screen and (min-width: 480px) {
-}
-
+// MOBILE MENU
 .menu-btn {
   display: inline-flex;
   border: none;
@@ -70,41 +64,55 @@
     display: flex;
   }
 }
+// NAVIGATION
 
 .navigation {
-  margin-bottom: 60px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin-right: 84px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 305px;
+  }
 
   &__list {
     display: flex;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       flex-direction: column;
       align-items: center;
     }
-    @media screen and (min-width: 1600px) {
-      margin-left: 93px;
+
+    @media screen and (min-width: 768px) {
+      align-items: center;
     }
   }
 
-  // .navigation__list-item:not(:last-child) {
-  //   margin-right: 50px;
-  // }
   &__list-item:not(:last-child) {
     @media screen and(max-width: 767px) {
       margin-bottom: 40px;
     }
+
+    @media screen and(min-width: 768px) {
+      margin-right: 50px;
+    }
   }
+
   &__list-item {
     transition: padding 250ms $timing-function;
   }
 
   &__list-item:hover,
   &__list-item--active {
-    padding-bottom: 8px;
+    @media screen and(max-width: 767px) {
+      padding-bottom: 8px;
+    }
   }
-  // &__list-item--active {
-  //   padding-bottom: 8px;
-  // }
 
   &__list-link {
     position: relative;
@@ -116,12 +124,14 @@
     text-decoration: none;
     transition: color 250ms $timing-function;
 
-    @media screen and (max-width: 767px) {
+    @media screen and (min-width: 768px) {
+      display: block;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      font-size: 14px;
+      line-height: 1.14;
     }
-    @media screen and (min-width: 1600px) {
-      // display: block;
-      // padding-top: 32px;
-      // padding-bottom: 32px;
+    @media screen and (min-width: 1200px) {
       font-size: 14px;
       line-height: 1.14;
     }
@@ -162,23 +172,46 @@
   }
 }
 
-.contacts-list {
-  // display: flex;
-  // margin-left: auto;
+// CONTACTS
 
-  // &__item + &__item {
-  //   margin-left: 50px;
-  // }
+.contacts-list {
+  text-align: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__item + &__item {
+      margin-left: 50px;
+    }
+  }
 
   &__link {
-    // display: flex;
-    // align-items: center;
     font-size: 18px;
     line-height: 1.16;
     font-weight: 500;
     color: $text-color;
     text-decoration: none;
     transition: color 250ms $timing-function;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      font-size: 12px;
+    }
+    @media screen and (min-width: 1200px) {
+      align-items: center;
+      display: flex;
+      font-size: 14px;
+      line-height: 1.14;
+    }
 
     &:hover,
     &:focus {
@@ -187,11 +220,19 @@
   }
 
   &__item {
-    @media screen and (max-width: 1600px) {
-      text-align: center;
-
+    & + & {
+      margin-top: 16px;
+    }
+    @media screen and (min-width: 768px) {
       & + & {
-        margin-top: 16px;
+        margin-top: 10px;
+      }
+    }
+    @media screen and (min-width: 1200px) {
+      text-align: center;
+      & + & {
+        margin-top: 0;
+        margin-left: 30px;
       }
     }
   }
