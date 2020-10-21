@@ -1,80 +1,180 @@
 .header {
+  position: relative;
   background-color: $primary-white-color;
   border-bottom: 1px solid $header-border-color;
 }
 
-.header-navigation,
-.navigation {
+// .header-navigation,
+// .navigation {
+//   display: flex;
+//   align-items: center;
+// }
+
+// MOBILE MENU
+.header-navigation {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
-.navigation__list {
-  display: flex;
-  margin-left: 93px;
+@media screen and (min-width: 480px) {
 }
 
-.navigation__list-item:not(:last-child) {
-  margin-right: 50px;
-}
+.menu-btn {
+  display: inline-flex;
+  border: none;
+  outline: none;
+  background-color: transparent;
 
-.navigation__list-link {
-  position: relative;
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  color: $title-text-color;
-
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  transition: color 250ms $timing-function;
-
-  &:focus,
-  &:hover {
-    color: $accent-color;
+  & .icon-cross {
+    display: none;
   }
 
-  &--active {
-    color: $accent-color;
+  &.is-open .icon-cross {
+    display: block;
+  }
+  &.is-open .icon-menu {
+    display: none;
+  }
+  &:hover .mobile-menu,
+  &:focus .mobile-menu {
+    fill: $accent-color;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.mobile-menu {
+  transition: fill 250ms $timing-function;
+}
+
+.menu-container {
+  &.is-open {
+    display: block;
   }
 
-  &::after {
-    content: '';
-    display: flex;
+  @media screen and (max-width: 767px) {
+    display: none;
     position: absolute;
-    bottom: -1px;
+    top: 100%;
+    left: 0;
     width: 100%;
-    height: 4px;
-    background-color: $accent-color;
-    border-radius: 2px;
-    opacity: 0;
-    transition: opacity 250ms $timing-function;
+    padding: 60px 120px;
+    background: $primary-white-color;
+    box-shadow: $mobile-menu-shadow;
   }
 
-  &--active::after {
-    opacity: 1;
+  @media screen and (min-width: 768px) {
+    display: flex;
   }
 }
 
-.navigation__list-item:hover .navigation__list-link::after {
-  opacity: 1;
+.navigation {
+  margin-bottom: 60px;
+
+  &__list {
+    display: flex;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @media screen and (min-width: 1600px) {
+      margin-left: 93px;
+    }
+  }
+
+  // .navigation__list-item:not(:last-child) {
+  //   margin-right: 50px;
+  // }
+  &__list-item:not(:last-child) {
+    @media screen and(max-width: 767px) {
+      margin-bottom: 40px;
+    }
+  }
+  &__list-item {
+    transition: padding 250ms $timing-function;
+  }
+
+  &__list-item:hover,
+  &__list-item--active {
+    padding-bottom: 8px;
+  }
+  // &__list-item--active {
+  //   padding-bottom: 8px;
+  // }
+
+  &__list-link {
+    position: relative;
+    color: $title-text-color;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    transition: color 250ms $timing-function;
+
+    @media screen and (max-width: 767px) {
+    }
+    @media screen and (min-width: 1600px) {
+      // display: block;
+      // padding-top: 32px;
+      // padding-bottom: 32px;
+      font-size: 14px;
+      line-height: 1.14;
+    }
+
+    &:focus,
+    &:hover {
+      color: $accent-color;
+    }
+
+    &--active {
+      color: $accent-color;
+    }
+
+    &::after {
+      content: '';
+      display: flex;
+      position: absolute;
+      bottom: -1px;
+      width: 100%;
+      height: 4px;
+      background-color: $accent-color;
+      border-radius: 2px;
+      opacity: 0;
+      transition: opacity 250ms $timing-function;
+
+      @media screen and (max-width: 767px) {
+        bottom: -8px;
+      }
+    }
+
+    &--active::after {
+      opacity: 1;
+    }
+
+    .navigation__list-item:hover &::after {
+      opacity: 1;
+    }
+  }
 }
 
 .contacts-list {
-  display: flex;
-  margin-left: auto;
+  // display: flex;
+  // margin-left: auto;
 
-  &__item + &__item {
-    margin-left: 50px;
-  }
+  // &__item + &__item {
+  //   margin-left: 50px;
+  // }
 
   &__link {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
+    font-size: 18px;
+    line-height: 1.16;
     font-weight: 500;
     color: $text-color;
     text-decoration: none;
@@ -83,6 +183,16 @@
     &:hover,
     &:focus {
       color: $accent-color;
+    }
+  }
+
+  &__item {
+    @media screen and (max-width: 1600px) {
+      text-align: center;
+
+      & + & {
+        margin-top: 16px;
+      }
     }
   }
 }
