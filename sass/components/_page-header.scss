@@ -54,6 +54,7 @@
     padding: 60px 100px;
     background: $primary-white-color;
     box-shadow: $mobile-menu-shadow;
+    z-index: 100;
 
     &.is-open {
       display: block;
