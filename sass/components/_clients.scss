@@ -1,25 +1,65 @@
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   &__list {
     display: flex;
+
+    @media screen and (max-width: 1600px) {
+      flex-wrap: wrap;
+    }
   }
 
-  &__item + &__item {
-    margin-left: 30px;
+  &__item {
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+      &:nth-child(2n + 1) {
+        margin-right: 30px;
+      }
+
+      &:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      &:not(:nth-child(3n)) {
+        margin-right: 30px;
+      }
+
+      &:not(:nth-last-child(-n + 3)) {
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      & + & {
+        margin-left: 30px;
+      }
+    }
   }
 
   &__link {
     display: flex;
     align-content: center;
     justify-content: center;
-    width: 170px;
+    width: 210px;
     height: 90px;
     border: 1px solid $icon-color;
     border-radius: 4px;
-
     transition: border 250ms $timing-function;
+
+    @media screen and (min-width: 768px) {
+      width: 226px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 170px;
+    }
 
     &:focus,
     &:hover {
