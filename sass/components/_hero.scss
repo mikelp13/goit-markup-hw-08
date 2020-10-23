@@ -9,16 +9,39 @@
   background-color: $hero-footer-bg-color;
   background-image: $hero-gradient,
     url('../images/hero/mobile/hero-480-min.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  @media screen and (min-width: 768px,) {
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: $hero-gradient,
+      url('../images/hero/mobile/hero-@2x-min.jpg');
+  }
+
+  @media screen and (min-width: 768px) {
     background-image: $hero-gradient,
       url('../images/hero/tablet/hero-768-min.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: $hero-gradient,
+        url('../images/hero/tablet/hero-@2x-min.jpg');
+    }
   }
 
   @media screen and (min-width: 1200px) {
     height: 600px;
     background-image: $hero-gradient,
       url('../images/hero/desktop/hero-1600-min.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: $hero-gradient,
+        url('../images/hero/desktop/hero-@2x-min.jpg');
+    }
   }
 
   &__title {
