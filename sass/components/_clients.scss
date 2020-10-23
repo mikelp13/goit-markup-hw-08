@@ -9,6 +9,7 @@
 
   &__list {
     display: flex;
+    justify-content: center;
 
     @media screen and (max-width: 1600px) {
       flex-wrap: wrap;
@@ -16,6 +17,12 @@
   }
 
   &__item {
+    @media screen and (max-width: 480px) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
     @media screen and (min-width: 480px) and (max-width: 767px) {
       &:nth-child(2n + 1) {
         margin-right: 30px;
