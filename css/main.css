@@ -308,13 +308,6 @@ h6 {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .navigation__list-link {
-    font-size: 14px;
-    line-height: 1.14;
-  }
-}
-
 .navigation__list-link:focus, .navigation__list-link:hover {
   color: #2196f3;
 }
@@ -377,9 +370,6 @@ h6 {
 
 @media screen and (min-width: 1200px) {
   .contacts-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -817,7 +807,7 @@ h6 {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .clients__item:nth-child(2n + 1) {
     margin-right: 30px;
   }

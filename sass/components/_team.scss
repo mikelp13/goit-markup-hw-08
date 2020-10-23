@@ -22,10 +22,6 @@
     box-shadow: $team-card-shadow;
     border-radius: 0px 0px 4px 4px;
 
-    // @media screen and (min-width: 1200px) {
-    //   // padding-bottom: 30px;
-    // }
-
     &:not(:last-child) {
       @media screen and (max-width: 1199px) {
         margin-bottom: 30px;
@@ -48,7 +44,6 @@
     }
   }
 
-  // ТИМЧАСОВО ДЛЯ РОЗМІРІВ КАРТИНОК
   &__list-card-img {
     @media screen and (min-width: 768px) {
       width: 354px;
