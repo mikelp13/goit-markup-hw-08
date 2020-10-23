@@ -48,7 +48,6 @@ h6 {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 2px solid green;
 }
 
 @media screen and (min-width: 480px) {
@@ -121,7 +120,7 @@ h6 {
   color: #ffffff;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1200px) {
   .studio-logo {
     font-size: 26px;
     line-height: 1.2;
@@ -796,7 +795,7 @@ h6 {
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .clients__item:nth-child(2n + 1) {
     margin-right: 30px;
   }

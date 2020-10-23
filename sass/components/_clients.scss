@@ -16,7 +16,7 @@
   }
 
   &__item {
-    @media screen and (min-width: 480px) and (max-width: 767px) {
+    @media screen and (max-width: 767px) {
       &:nth-child(2n + 1) {
         margin-right: 30px;
       }
