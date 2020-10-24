@@ -63,17 +63,27 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: 63px 24px;
-
+    padding: 40px 10px;
     width: 100%;
     height: 100%;
-    font-size: 18px;
+    font-size: 4vw;
     line-height: 1.56;
     background: $overlay-color;
     color: $primary-white-color;
 
     transform: translateY(100%);
     transition: transform 250ms $timing-function;
+
+    @media screen and (min-width: 480px) {
+      font-size: 18px;
+      padding: 77px 24px;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 49px 24px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 63px 24px;
+    }
   }
 
   &__list-card:hover &__list-card-label {
@@ -95,7 +105,6 @@
     border-bottom: 1px solid $border-color;
     border-left: 1px solid $border-color;
   }
-
   &__list-card-title {
     margin-bottom: 4px;
     font-weight: 700;
